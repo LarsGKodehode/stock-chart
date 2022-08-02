@@ -1,0 +1,4 @@
+/* Allocates all the screen realestate to document*/
+html {
+  min-height: 100%;
+}
