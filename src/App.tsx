@@ -16,7 +16,7 @@ import SearchBar from './assets/components/SearchBar/SearchBar'
 import StockChart from './assets/components/StockChart/StockChart';
 
 // secret format
-interface SecretesFormat {
+interface SecretsFormat {
   USER: string,
   API_KEYS: {
     KEY: string,
@@ -42,7 +42,6 @@ const getAPIKey: any = async () => {
       .then(data => {
         return data.API_KEYS.SANDBOXED_KEY;
       });
-    const response = await fetch('./.env/secrets.json');
 
   } catch (error) {
     const message = `Enter your API Key here:`;
@@ -63,6 +62,8 @@ function App() {
   // State managment
   const [ENV, setENV] = useState({
     API_KEY: "",
+    API_ENDPOINT: "https://finnhub.io/api/v1",
+    REQUEST_HEADER: {"X-Finnhub-Token": "sandbox_cbtkv72ad3i65oqcith0"},
   });
 
   // Get API keys

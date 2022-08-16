@@ -6,24 +6,23 @@ import {
 
 // Types
 interface SearchProps {
-  API_KEY: string,
-  API_ENDPOINT: string,
+  ENV: Object,
 };
 
 // Component
 function SearchBar(props: SearchProps): JSX.Element {
   // Get props
-  const { API_KEY} = props;
+  const { ENV } = props;
 
   // State managment
   const [data, setData] = useState({
     textInput: "",
   });
 
-  // functions
+  // Functions
   function handleChange(event: BaseSyntheticEvent) {
     const { value } = event.target;
-    console.log(API_KEY)
+    console.log(ENV.API_KEY)
     setData((oldData) => {
       return {
         ...oldData,
