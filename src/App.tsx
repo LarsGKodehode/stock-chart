@@ -40,9 +40,7 @@ const getAPIKey: any = async () => {
     fetch('./.env/secrets.json')
       .then(response => response.json())
       .then(data => {
-        if(data) {
-          return data.API_KEYS.SANDBOXED_KEY;
-        };
+        return data.API_KEYS.SANDBOXED_KEY;
       });
     const response = await fetch('./.env/secrets.json');
 
@@ -109,7 +107,8 @@ function App() {
 
   // Props definitions
   const searchProps = {
-    text: "",
+    API_KEY: ENV.API_KEY,
+    API_ENDPOINT: "",
   };
 
   return (

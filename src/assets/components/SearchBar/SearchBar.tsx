@@ -6,13 +6,14 @@ import {
 
 // Types
 interface SearchProps {
-  text: string
+  API_KEY: string,
+  API_ENDPOINT: string,
 };
 
 // Component
 function SearchBar(props: SearchProps): JSX.Element {
   // Get props
-  const { } = props;
+  const { API_KEY} = props;
 
   // State managment
   const [data, setData] = useState({
@@ -22,7 +23,7 @@ function SearchBar(props: SearchProps): JSX.Element {
   // functions
   function handleChange(event: BaseSyntheticEvent) {
     const { value } = event.target;
-    console.log(value)
+    console.log(API_KEY)
     setData((oldData) => {
       return {
         ...oldData,
