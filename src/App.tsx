@@ -58,6 +58,7 @@ const getAPIKey: any = async () => {
 };
 
 
+// APP
 function App() {
   // State managment
   const [ENV, setENV] = useState({
@@ -74,7 +75,7 @@ function App() {
         setENV((oldData) => {
           return {
             ...oldData,
-            API_KEY: data.API_KEYS.KEY,
+            API_KEY: data.API_KEYS.SANDBOXED_KEY,
           };
         });
 
@@ -99,7 +100,7 @@ function App() {
   // ===== DEV ======
   // simple function caller
   function doStuff() {
-    console.log(ENV.API_KEY)
+    console.log(ENV);
   };
   // ===== DEV ======
 
@@ -108,7 +109,9 @@ function App() {
 
       <h1>{ENV.API_KEY ? ENV.API_KEY : `No API key found`}</h1>
 
-      <button onClick={() => doStuff()}>DEV BUTTON</button>
+      <div className='DEV_STUFF'>
+        <button onClick={() => doStuff()}>DEV BUTTON</button>
+      </div>
 
     </div>
   );
