@@ -12,6 +12,7 @@ import {
 import './App.css';
 
 // Components
+import SearchBar from './assets/components/SearchBar/SearchBar'
 import StockChart from './assets/components/StockChart/StockChart';
 
 // secret format
@@ -105,8 +106,16 @@ function App() {
   };
   // ===== DEV ======
 
+
+  // Props definitions
+  const searchProps = {
+    text: "",
+  };
+
   return (
     <div className="App">
+
+      <SearchBar {...searchProps} />
 
       <StockChart />
 
