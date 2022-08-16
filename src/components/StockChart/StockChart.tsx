@@ -15,3 +15,5 @@ function StockChart(props: ComponentStockChart): JSX.Element {
     </div>
   );
 };
+
+export default StockChart;
