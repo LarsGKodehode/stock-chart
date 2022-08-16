@@ -2,12 +2,29 @@
 import {
   useEffect
 } from 'react';
+
 import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
 
 
 // Types
 interface ComponentStockChart {
   URLEndpoint: string,
+};
+
+// Chart options
+const options = {
+  title: {
+    text: `Testing Chart`,
+  },
+  series: [
+    {
+      data: [1, 2, 3]
+    },
+    {
+      data: [3, 2, 1]
+    }
+  ]
 };
 
 
@@ -18,8 +35,11 @@ function StockChart(props: ComponentStockChart): JSX.Element {
   }, []);
 
   return(
-    <div id='chart-container'>
-      <h1>Chart here</h1>
+    <div>
+      <HighchartsReact 
+        highcharts={Highcharts}
+        options={options}
+      />
     </div>
   );
 };
