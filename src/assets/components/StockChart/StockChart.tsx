@@ -9,7 +9,6 @@ import HighchartsReact from 'highcharts-react-official';
 
 // Types
 interface ComponentStockChart {
-  URLEndpoint: string,
 };
 
 // Chart options
