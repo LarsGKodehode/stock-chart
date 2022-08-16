@@ -109,7 +109,8 @@ function App() {
   // Props definitions
   const searchProps = {
     API_KEY: ENV.API_KEY,
-    API_ENDPOINT: "",
+    API_ENDPOINT: ENV.API_ENDPOINT,
+    REQUEST_HEADER: ENV.REQUEST_HEADER,
   };
 
   return (
