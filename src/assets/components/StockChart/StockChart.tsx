@@ -1,5 +1,7 @@
-// Library
-import React from 'react';
+// Libraries
+import {
+  useEffect
+} from 'react';
 import Highcharts from 'highcharts';
 
 
@@ -8,7 +10,13 @@ interface ComponentStockChart {
   URLEndpoint: string,
 };
 
+
+// Component
 function StockChart(props: ComponentStockChart): JSX.Element {
+  useEffect(() => {
+    
+  }, []);
+
   return(
     <div>
       <h1>Chart here</h1>
