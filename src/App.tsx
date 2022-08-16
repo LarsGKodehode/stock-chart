@@ -12,6 +12,7 @@ import {
 import './App.css';
 
 // Components
+import StockChart from './assets/components/StockChart/StockChart';
 
 // secret format
 interface SecretesFormat {
@@ -107,9 +108,10 @@ function App() {
   return (
     <div className="App">
 
-      <h1>{ENV.API_KEY ? ENV.API_KEY : `No API key found`}</h1>
+      <StockChart />
 
       <div className='DEV_STUFF'>
+        <h1>{ENV.API_KEY ? ENV.API_KEY : `No API key found`}</h1>
         <button onClick={() => doStuff()}>DEV BUTTON</button>
       </div>
 

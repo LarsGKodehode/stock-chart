@@ -14,11 +14,11 @@ interface ComponentStockChart {
 // Component
 function StockChart(props: ComponentStockChart): JSX.Element {
   useEffect(() => {
-    
+
   }, []);
 
   return(
-    <div>
+    <div id='chart-container'>
       <h1>Chart here</h1>
     </div>
   );
