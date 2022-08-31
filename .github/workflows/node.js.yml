@@ -26,7 +26,7 @@ jobs:
 
     - name: Install dependencies
       run: npm install --location=global yarn
-      run: yarn
+    - run: yarn install
 
     - name: Build
       run: yarn run build
